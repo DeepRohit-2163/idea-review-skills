@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Idea Review Skills for Claude Code</title>
-<meta name="description" content="26 open-source Claude Code skills that review any project idea through 23 role lenses before you build. Draft preview.">
+<title>Idea Review Skills for coding agents</title>
+<meta name="description" content="26 open-source agent skills (built for Claude Code, plain Markdown) that review any project idea through 23 role lenses before you build. Draft preview.">
 <link rel="canonical" href="https://deeprohit-2163.github.io/idea-review-skills/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -39,9 +39,9 @@ footer{padding:32px 0 56px;color:var(--mut);font-size:14px}
 </head>
 <body>
 <header class="hero"><div class="wrap">
-  <div class="eyebrow">Open-source Claude Code skills</div>
+  <div class="eyebrow">Open-source agent skills &middot; built in Claude Code</div>
   <h1>See every constraint on an idea before you build it.</h1>
-  <p class="lede">26 skills for Claude Code: a preflight constraint scan, 23 role lenses (CEO to QA), and one orchestrator that runs them all in parallel and stops for your explicit confirmation before anything proceeds.</p>
+  <p class="lede">26 plain-Markdown skills for coding agents, built and tested in Claude Code: a preflight constraint scan, 23 role lenses (CEO to QA), and one orchestrator that runs them all in parallel and stops for your explicit confirmation before anything proceeds.</p>
   <div class="cta"><a class="btn p" href="#install">Install</a><a class="btn" href="#lenses">Browse the lenses</a></div>
 </div></header>
 
@@ -122,9 +122,20 @@ footer{padding:32px 0 56px;color:var(--mut);font-size:14px}
   </ul>
 </section>
 
+<section id="agents">
+  <h2>Works beyond Claude Code?</h2>
+  <p class="sub">The skills are plain Markdown (<code>skills/&lt;name&gt;/SKILL.md</code>), so the content is portable. Only the install route is Claude Code specific, and only Claude Code is tested.</p>
+  <ul>
+    <li><b>Claude Code:</b> the <code>/plugin</code> install below, or copy to <code>~/.claude/skills/</code>.</li>
+    <li><b>Agents with a <code>SKILL.md</code> skills folder (such as Codex):</b> copy the folders from <code>skills/</code> into that folder; check your tool's docs for the path.</li>
+    <li><b>Any other agent:</b> paste a skill into the prompt, or point to it from <code>AGENTS.md</code>.</li>
+    <li><b>Expect differences:</b> the parallel panel in <code>/idea-review</code> assumes the agent can run sub-agents; elsewhere, run the lenses one at a time. Namespaced <code>/idea-review:&lt;skill&gt;</code> commands exist only in Claude Code.</li>
+  </ul>
+</section>
+
 <section id="install">
   <h2>Install</h2>
-  <p class="sub">Two commands inside Claude Code. No clone needed. Project-context files such as <code>CLAUDE.md</code> and <code>projects/</code> are optional.</p>
+  <p class="sub">Claude Code: two commands, no clone needed. Project-context files such as <code>CLAUDE.md</code> and <code>projects/</code> are optional.</p>
 <pre>/plugin marketplace add DeepRohit-2163/idea-review-skills
 /plugin install idea-review@idea-review-skills
 

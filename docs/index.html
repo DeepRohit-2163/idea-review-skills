@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Idea Review Skills for Claude Code</title>
+<meta name="description" content="26 open-source Claude Code skills that review any project idea through 23 role lenses before you build. Draft preview.">
+<link rel="canonical" href="https://deeprohit-2163.github.io/idea-review-skills/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fafaf7;--fg:#1c1c1a;--mut:#62625c;--line:#e2e1da;--card:#fff;--acc:#1f5f4a;--acc-bg:#e6f1ec;--warn:#8a5a00;--warn-bg:#fdf3dc;--f:'Inter',system-ui,sans-serif;--m:'JetBrains Mono',ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#131412;--fg:#ecece6;--mut:#a3a39b;--line:#2b2c28;--card:#1b1c19;--acc:#6fd0aa;--acc-bg:#1a2b24;--warn:#f0c36b;--warn-bg:#2e2512}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--f)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header.hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.eyebrow{font:500 12px var(--m);letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+h1{font-size:clamp(30px,6vw,48px);line-height:1.1;margin:12px 0 16px;letter-spacing:-.02em}
+.lede{font-size:18px;color:var(--mut);max-width:62ch;margin:0 0 24px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+a.btn{display:inline-block;padding:10px 18px;border-radius:6px;font-weight:600;text-decoration:none;border:1px solid var(--acc);color:var(--acc)}
+a.btn.p{background:var(--acc);color:var(--bg)}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+h2{font-size:24px;margin:0 0 8px;letter-spacing:-.01em}
+p.sub{color:var(--mut);margin:0 0 24px;max-width:70ch}
+.steps{counter-reset:s;display:grid;gap:12px;padding:0;list-style:none}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px 14px 52px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:16px;top:14px;font:500 13px var(--m);color:var(--acc);background:var(--acc-bg);width:24px;height:24px;border-radius:50%;display:grid;place-items:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+.card code{font:500 13px var(--m);color:var(--acc)}
+.card p{margin:6px 0 0;font-size:14px;color:var(--mut)}
+.grp{font:500 12px var(--m);letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:28px 0 10px}
+pre{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;overflow-x:auto;font:13px/1.5 var(--m)}
+.note{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:12px 16px;font-size:14px}
+footer{padding:32px 0 56px;color:var(--mut);font-size:14px}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Open-source Claude Code skills</div>
+  <h1>See every constraint on an idea before you build it.</h1>
+  <p class="lede">26 skills for Claude Code: a preflight constraint scan, 23 role lenses (CEO to QA), and one orchestrator that runs them all in parallel and stops for your explicit confirmation before anything proceeds.</p>
+  <div class="cta"><a class="btn p" href="#install">Install</a><a class="btn" href="#lenses">Browse the lenses</a></div>
+</div></header>
+
+<main class="wrap">
+<section id="how">
+  <h2>How an idea review runs</h2>
+  <p class="sub">One command, <code>/idea-review your idea</code>. Seven stages, in order.</p>
+  <ol class="steps">
+    <li><b>Playback.</b> Restates the idea and its assumptions; asks about anything material that is unknown.</li>
+    <li><b>Preflight.</b> Constraint scan across 10 categories, base rates, assumption map, dated kill criteria.</li>
+    <li><b>23 lenses in parallel.</b> Each reports pros, cons, hard constraints and a verdict. None are skipped.</li>
+    <li><b>Scenarios.</b> Best, base and worst case with numbers, six or more stress scenarios, and a pre-mortem.</li>
+    <li><b>Cross-examination.</b> Disagreements between lenses are resolved by the role that owns the decision.</li>
+    <li><b>Synthesis.</b> Pros and cons weighted equally, hard constraints, riskiest assumptions, and a recommendation: Go, Go with conditions, Park or Kill.</li>
+    <li><b>Confirmation gate.</b> Nothing is built, bought or sent until you answer.</li>
+  </ol>
+</section>
+
+<section id="lenses">
+  <h2>The skills</h2>
+  <p class="sub">Each lens owns specific decisions, names the owner when asked something outside its rights, and carries a dated "current standards" section.</p>
+
+  <div class="grp">Orchestration</div>
+  <div class="grid">
+    <div class="card"><code>/idea-review</code><p>Full multi-role review of any idea, with a confirmation gate.</p></div>
+    <div class="card"><code>/preflight</code><p>Ten-category constraint scan, base rates and kill criteria.</p></div>
+    <div class="card"><code>/research</code><p>Sourced, dated answers; verified and assumed claims kept apart.</p></div>
+  </div>
+
+  <div class="grp">Strategy and governance</div>
+  <div class="grid">
+    <div class="card"><code>/ceo</code><p>Thesis, go/no-go, hiring bar, tiebreaks.</p></div>
+    <div class="card"><code>/board-of-directors</code><p>Reserved matters, phase gates, conflicts.</p></div>
+    <div class="card"><code>/advisory-board</code><p>Advisor selection, equity, cadence.</p></div>
+    <div class="card"><code>/investors-observers</code><p>Capital providers, instruments, seats.</p></div>
+    <div class="card"><code>/fractional-executive</code><p>Part-time versus full-time roles.</p></div>
+    <div class="card"><code>/coo</code><p>Operating cadence, runbooks, controls.</p></div>
+  </div>
+
+  <div class="grp">Product and design</div>
+  <div class="grid">
+    <div class="card"><code>/cpo</code><p>Product strategy, metrics, what to kill.</p></div>
+    <div class="card"><code>/product-manager</code><p>Acceptance criteria, backlog, release go/no-go.</p></div>
+    <div class="card"><code>/product-designer</code><p>Flows, accessibility, calibrated trust.</p></div>
+    <div class="card"><code>/design-partner</code><p>Early paying customers and their terms.</p></div>
+    <div class="card"><code>/subject-matter-expert</code><p>Domain correctness and expert review.</p></div>
+    <div class="card"><code>/technical-writer-dx</code><p>Docs architecture and onboarding.</p></div>
+  </div>
+
+  <div class="grp">Engineering and security</div>
+  <div class="grid">
+    <div class="card"><code>/cto</code><p>Architecture, stack, build versus buy.</p></div>
+    <div class="card"><code>/engineering-lead</code><p>Delivery, release cadence, on-call.</p></div>
+    <div class="card"><code>/devops-platform</code><p>Environments, sandboxing, cost per unit.</p></div>
+    <div class="card"><code>/security-lead</code><p>Threat model and controls.</p></div>
+    <div class="card"><code>/qa</code><p>Definition of releasable, test strategy.</p></div>
+    <div class="card"><code>/ai-lead</code><p>Model choice, evals, inference cost.</p></div>
+    <div class="card"><code>/data-analytics</code><p>Metric definitions and instrumentation.</p></div>
+  </div>
+
+  <div class="grp">Money, market and law</div>
+  <div class="grid">
+    <div class="card"><code>/finance-lead</code><p>Runway, unit economics, cap table.</p></div>
+    <div class="card"><code>/commercial-lead</code><p>ICP, positioning, sales motion.</p></div>
+    <div class="card"><code>/customer-success</code><p>Onboarding, health, renewal.</p></div>
+    <div class="card"><code>/legal-regulatory-compliance</code><p>Whether the project is allowed to do the thing. Not legal advice.</p></div>
+  </div>
+</section>
+
+<section id="fresh">
+  <h2>How current are the standards?</h2>
+  <p class="sub">Every lens has a dated "Current standards" section. They were checked against live sources on 2026-11-09, then corrected.</p>
+  <ul>
+    <li><b>Source and date on every claim.</b> Each fact carries a link and an as-of date.</li>
+    <li><b>Evidence is labelled.</b> Primary, secondary or unverified. A proposal is never written up as adopted law, and a forecast is never written up as an observed rate.</li>
+    <li><b>Unconfirmed claims stay visible.</b> Where a source could not be fetched, the claim is tagged <code>(unverified)</code> rather than dropped or trusted.</li>
+    <li><b>Refresh about every six months</b> with <code>/research</code>, or sooner when a source contradicts a lens.</li>
+  </ul>
+</section>
+
+<section id="install">
+  <h2>Install</h2>
+  <p class="sub">Works standalone. Project-context files such as <code>CLAUDE.md</code> and <code>projects/</code> are optional; the method skills create what they need in the current folder.</p>
+<pre>git clone https://github.com/DeepRohit-2163/idea-review-skills.git
+cp -r idea-review-skills/skills/* ~/.claude/skills/
+# then, in Claude Code:
+/idea-review a marketplace for used climbing gear</pre>
+  <p class="note">Released under the MIT licence. Not legal, financial or tax advice.</p>
+</section>
+</main>
+
+<footer><div class="wrap">Licence: MIT. Not legal, financial or compliance advice. Standards sections are dated and should be re-checked before relying on them.</div></footer>
+</body>
+</html>

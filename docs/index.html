@@ -135,11 +135,13 @@ footer{padding:32px 0 56px;color:var(--mut);font-size:14px}
 
 <section id="install">
   <h2>Install</h2>
-  <p class="sub">Claude Code: two commands, no clone needed. Project-context files such as <code>CLAUDE.md</code> and <code>projects/</code> are optional.</p>
-<pre>/plugin marketplace add DeepRohit-2163/idea-review-skills
-/plugin install idea-review@idea-review-skills
-
-/idea-review:idea-review a marketplace for used climbing gear</pre>
+  <p class="sub"><b>Claude Code, from your terminal</b> (Windows, macOS, Linux). Needs a recent Claude Code with plugin support (tested on 2.1.308) and <code>git</code> on your PATH.</p>
+<pre>claude plugin marketplace add DeepRohit-2163/idea-review-skills
+claude plugin install idea-review@idea-review-skills</pre>
+  <p class="sub">Or inside a session: <code>/plugin marketplace add DeepRohit-2163/idea-review-skills</code>, then <code>/plugin install idea-review@idea-review-skills</code>. In the <code>/plugin</code> menu, enter only <code>DeepRohit-2163/idea-review-skills</code> as the source.</p>
+  <p class="sub">Then <b>start a new session</b> (new skills load at session start) and run the command below from an empty or scratch folder, because the review creates <code>projects/</code> and <code>research_notes/</code> in the current directory.</p>
+<pre>/idea-review:idea-review a marketplace for used climbing gear</pre>
+  <p class="note">If your organisation manages Claude Code settings, it may block third-party marketplaces. Ask your admin, or use the copy method below.</p>
   <p class="sub">Plugin skills are namespaced: <code>/idea-review:ceo</code>, <code>/idea-review:preflight</code> and so on. Want bare <code>/idea-review</code> and <code>/ceo</code>? Copy the folders instead:</p>
 <pre>git clone https://github.com/DeepRohit-2163/idea-review-skills.git
 cp -r idea-review-skills/skills/* ~/.claude/skills/</pre>

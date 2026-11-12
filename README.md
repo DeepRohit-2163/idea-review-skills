@@ -6,14 +6,18 @@ Site: https://deeprohit-2163.github.io/idea-review-skills/
 
 ## Install
 
-In Claude Code:
+**Option A, from your terminal** (works the same on Windows, macOS and Linux):
 
 ```
-/plugin marketplace add DeepRohit-2163/idea-review-skills
-/plugin install idea-review@idea-review-skills
+claude plugin marketplace add DeepRohit-2163/idea-review-skills
+claude plugin install idea-review@idea-review-skills
 ```
 
-Then run, for example: `/idea-review:idea-review a marketplace for used climbing gear`
+**Option B, inside a Claude Code session:** type `/plugin marketplace add DeepRohit-2163/idea-review-skills`, then `/plugin install idea-review@idea-review-skills`. If you use the `/plugin` menu instead, enter only `DeepRohit-2163/idea-review-skills` in the source field, with no `https://` page URL, no `@...` suffix and no leading slash.
+
+Then **start a new Claude Code session** (new skills load at session start) and run, for example, `/idea-review:idea-review a marketplace for used climbing gear`. Run it from an empty or scratch folder: the review creates `projects/` and `research_notes/` in the current directory.
+
+Needs a recent Claude Code with plugin support (tested on 2.1.308) and `git` on your PATH. If your organisation manages Claude Code settings, it may block third-party marketplaces; ask your admin or use the copy method below.
 
 Plugin skills are namespaced, so each skill is `/idea-review:<skill>` (for example `/idea-review:ceo`, `/idea-review:preflight`). Inside the skill text the lenses are written as `/ceo`; read that as the namespaced command.
 

@@ -1,0 +1,8 @@
+{
+  "name": "idea-review",
+  "version": "1.0.0",
+  "description": "26 skills: a preflight constraint scan, 23 role lenses (CEO to QA) and an /idea-review orchestrator that stops for your confirmation.",
+  "author": { "name": "DeepRohit-2163" },
+  "license": "MIT",
+  "repository": "https://github.com/DeepRohit-2163/idea-review-skills"
+}

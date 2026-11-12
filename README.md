@@ -6,12 +6,23 @@ Site: https://deeprohit-2163.github.io/idea-review-skills/
 
 ## Install
 
+In Claude Code:
+
+```
+/plugin marketplace add DeepRohit-2163/idea-review-skills
+/plugin install idea-review@idea-review-skills
+```
+
+Then run, for example: `/idea-review:idea-review a marketplace for used climbing gear`
+
+Plugin skills are namespaced, so each skill is `/idea-review:<skill>` (for example `/idea-review:ceo`, `/idea-review:preflight`). Inside the skill text the lenses are written as `/ceo`; read that as the namespaced command.
+
+**Prefer bare `/idea-review`, `/ceo` and so on?** Copy the folders instead:
+
 ```
 git clone https://github.com/DeepRohit-2163/idea-review-skills.git
 cp -r idea-review-skills/skills/* ~/.claude/skills/
 ```
-
-Then, in Claude Code: `/idea-review a marketplace for used climbing gear`
 
 Project-context files (`CLAUDE.md`, `projects/`) are optional. The method skills create what they need in the current folder. See [skills/README.md](skills/README.md) for the full skill list and decision rights.
 

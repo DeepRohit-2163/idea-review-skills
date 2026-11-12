@@ -124,11 +124,14 @@ footer{padding:32px 0 56px;color:var(--mut);font-size:14px}
 
 <section id="install">
   <h2>Install</h2>
-  <p class="sub">Works standalone. Project-context files such as <code>CLAUDE.md</code> and <code>projects/</code> are optional; the method skills create what they need in the current folder.</p>
+  <p class="sub">Two commands inside Claude Code. No clone needed. Project-context files such as <code>CLAUDE.md</code> and <code>projects/</code> are optional.</p>
+<pre>/plugin marketplace add DeepRohit-2163/idea-review-skills
+/plugin install idea-review@idea-review-skills
+
+/idea-review:idea-review a marketplace for used climbing gear</pre>
+  <p class="sub">Plugin skills are namespaced: <code>/idea-review:ceo</code>, <code>/idea-review:preflight</code> and so on. Want bare <code>/idea-review</code> and <code>/ceo</code>? Copy the folders instead:</p>
 <pre>git clone https://github.com/DeepRohit-2163/idea-review-skills.git
-cp -r idea-review-skills/skills/* ~/.claude/skills/
-# then, in Claude Code:
-/idea-review a marketplace for used climbing gear</pre>
+cp -r idea-review-skills/skills/* ~/.claude/skills/</pre>
   <p class="note">Released under the MIT licence. Not legal, financial or tax advice.</p>
 </section>
 </main>

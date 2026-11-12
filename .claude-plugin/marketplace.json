@@ -1,0 +1,12 @@
+{
+  "name": "idea-review-skills",
+  "description": "Review any project idea through a preflight scan and 23 role lenses before you build it.",
+  "owner": { "name": "DeepRohit-2163" },
+  "plugins": [
+    {
+      "name": "idea-review",
+      "source": "./",
+      "description": "Review any project idea through a preflight scan and 23 role lenses before you build it."
+    }
+  ]
+}
